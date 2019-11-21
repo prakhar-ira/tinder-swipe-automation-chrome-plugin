@@ -11,16 +11,24 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./custom-webpack.config.js",
+              "mergeStrategies": {
+                "externals": "replace"
+              }
+            },
             "outputPath": "dist/angular-chrome-tinder-extension",
             "index": "src/index.html",
+            "aot": true,
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ],
             "styles": [
               "src/styles.css"
@@ -28,6 +36,11 @@
             "scripts": []
           },
           "configurations": {
+             "dev": {
+              "customWebpackConfig": {
+                "path": "./custom-webpack-dev.config.js"
+              }
+            },
             "production": {
               "fileReplacements": [
                 {
