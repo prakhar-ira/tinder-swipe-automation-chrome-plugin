@@ -1,5 +1,6 @@
 ## How to use
-Clone project, run `npm install` and `ng build`.
+Clone project, run `npm run build` to install modules and build project.
+Or alternate you can run `npm install`, then `npm build`.
 To use this extension, add this to chrome extension panel. By following steps:
 
 1. Go to chrome://extensions/.
