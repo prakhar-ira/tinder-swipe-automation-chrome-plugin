@@ -1,3 +1,18 @@
+## How to use
+Clone project, run `npm install` and `ng build`.
+To use this extension, add this to chrome extension panel. By following steps:
+
+1. Go to chrome://extensions/.
+2. At the top right, turn on Developer mode.
+3. Click Load unpacked.
+4. Select `/dist/Project_Folder` from cloned project folder.
+5. Click select.
+
+Now you can see the icon on right of address bar in chrome. Click it, and press button. The extension will be active only on tinder.com website.
+
+
+
+
 # AngularChromeTinderExtension
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
