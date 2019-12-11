@@ -13,7 +13,7 @@ export class AppComponent {
     //   chrome.tabs.executeScript(
     //     tab.id,
     //     { code: `
-    //     const likeButton = document.querySelector('button[aria-label="Like"]');
+    //     var likeButton = document.querySelector('button[aria-label="Like"]');
     //     const interval = setInterval(() => {
     //       const modalShow = document.querySelector('div[role="dialog"]');
     //         if (modalShow) {
@@ -32,6 +32,7 @@ export class AppComponent {
     chrome.tabs.executeScript(
       tabs[0].id,
       { code: `
+      (function() {
       const likeButton = document.querySelector('button[aria-label="Like"]');
       const interval = setInterval(() => {
         const modalShow = document.querySelector('div[role="dialog"]');
@@ -44,6 +45,7 @@ export class AppComponent {
           likeButton.click();
           }
         }, 1000);
+      })();
       ` }
     );
   });

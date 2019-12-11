@@ -1,0 +1,20 @@
+{
+  "name": "Tinder Extension",
+  "version": "1.0",
+  "description": "Build an Tinder Extension with Angular",
+  "manifest_version": 2,
+  "icons": { "128": "./assets/tinder.png" },
+  "permissions": [
+    "activeTab",
+    "webNavigation"
+  ],
+  "background": {
+      "scripts": [
+          "background.js",
+          "runtime.js"
+      ]
+  },
+  "page_action": {
+      "default_popup": "index.html"
+  }
+}
